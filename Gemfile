@@ -12,6 +12,7 @@ gem 'clipboard-rails'
 gem 'font-awesome-sass', '~> 4.4.0'
 gem 'httparty'
 gem 'nokogiri'
+gem 'vuejs-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks'
