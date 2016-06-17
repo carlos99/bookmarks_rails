@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get "/:slug" => "visits#index", as: :visit
 
+  get "/crawl/:url" => "crawl#index", as: :crawl, constraints: {url: /.*/}
+
 end
