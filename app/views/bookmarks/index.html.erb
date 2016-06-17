@@ -20,7 +20,17 @@
             <tr>
               <td><%= link_to bookmark.url, bookmark.url %></td>
               <td><%= bookmark.title %></td>
-              <td><%= link_to bookmark.slug, visit_path(bookmark.slug) %></td>
+              <td>
+                <div class="input-group">
+                  <%= text_field_tag "", visit_url(bookmark.slug), id: "bookmark-#{bookmark.id}", class: 'form-control' %>
+                  <span class="input-group-btn">
+                    <%= button_tag class: 'btn btn-default btn-clipboard', data: {"clipboard-target": "#bookmark-#{bookmark.id}"} do %>
+                      <i class="fa fa-clipboard" aria-hidden="true"></i>
+                    <% end %>
+                  </span>
+                </div>
+              </td>
+
               <td><%= link_to 'Show', bookmark %></td>
               <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
               <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
