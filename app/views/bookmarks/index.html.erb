@@ -19,6 +19,7 @@
           <% @bookmarks.each do |bookmark| %>
             <tr>
               <td><%= link_to bookmark.url, "http://" + bookmark.url %></td>
+              <td> <%= image_tag bookmark.image if bookmark.image %></td>
               <td><%= bookmark.title %></td>
               <td>
                 <div class="input-group">
