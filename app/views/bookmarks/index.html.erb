@@ -18,7 +18,7 @@
         <tbody>
           <% @bookmarks.each do |bookmark| %>
             <tr>
-              <td><%= link_to bookmark.url, bookmark.url %></td>
+              <td><%= link_to bookmark.url, "http://" + bookmark.url %></td>
               <td><%= bookmark.title %></td>
               <td>
                 <div class="input-group">
